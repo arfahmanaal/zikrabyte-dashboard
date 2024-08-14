@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "target": "ES6",
+    "outDir": "./dist",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -21,6 +23,10 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/dashboard/layout.jsx", "src/app/dashboard/dashboard/layout.tsx", "src/app/ui/dashboard/sidebar/menuLink/menuLink.tsx", "src/app/pages/api/submit-data.ts", "src/app/lib/mongodb.js", "src/app/lib/mongodb.js"],
+  "ts-node": {
+    "esm": true,
+        "experimentalSpecifierResolution": "node",
+ "exclude": ["node_modules"]
+}
 }

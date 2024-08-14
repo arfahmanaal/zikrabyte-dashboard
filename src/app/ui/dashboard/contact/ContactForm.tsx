@@ -16,7 +16,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
           &times;
         </button>
         <form className={styles.contactForm}>
-          <h2>Have a Project? Let's discuss</h2>
+          <h2>Have a Project? Lets discuss</h2>
           <p>Thank you for getting in touch! Kindly, fill the form, have a great day!</p>
           <input type="text" placeholder="Your Name" className={styles.inputField} />
           <input type="email" placeholder="Your Email" className={styles.inputField} />

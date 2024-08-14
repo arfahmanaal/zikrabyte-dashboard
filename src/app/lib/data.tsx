@@ -22,6 +22,6 @@ export const cards = [
     id: 3,
     title: "Glorious Years",
     number: '10+',
-   
+ 
   },
 ];

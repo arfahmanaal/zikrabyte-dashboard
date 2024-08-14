@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ES6",
     "outDir": "./dist",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,13 +24,31 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/dashboard/layout.jsx", "src/app/dashboard/dashboard/layout.tsx", "src/app/ui/dashboard/sidebar/menuLink/menuLink.tsx", "src/app/pages/api/submit-data.ts", "src/app/lib/mongodb.js", "src/app/lib/mongodb.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/dashboard/layout.jsx",
+    "src/app/dashboard/dashboard/layout.tsx",
+    "src/app/ui/dashboard/sidebar/menuLink/menuLink.tsx",
+    "src/app/pages/api/submit-data.ts",
+    "src/app/lib/mongodb.js",
+    "src/app/lib/mongodb.js"
+, "src/app/lib/db.js"  ],
   "ts-node": {
     "esm": true,
-        "experimentalSpecifierResolution": "node",
- "exclude": ["node_modules"]
-}
+    "experimentalSpecifierResolution": "node",
+    "exclude": [
+      "node_modules"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

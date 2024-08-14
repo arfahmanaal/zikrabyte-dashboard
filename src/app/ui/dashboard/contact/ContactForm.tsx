@@ -31,5 +31,4 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
     </div>
   );
 };
-
 export default ContactForm;

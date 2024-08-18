@@ -14,100 +14,76 @@ import {
   MdLogout,
 } from "react-icons/md";
 
-
 const menuItems = [
   {
-    title: "Pages",
-    list: [
-      {
-        title: "Dashboard",
-        path: "/dashboard",
-        icon: <MdDashboard />,
-      },
-      {
-        title: "Users",
-        path: "/dashboard/users",
-        icon: <MdSupervisedUserCircle />,
-      },
-      {
-        title: "Products",
-        path: "/dashboard/products",
-        icon: <MdShoppingBag />,
-      },
-      {
-        title: "Services",
-        path: "/dashboard/Services",
-        icon: <MdOutlineDesignServices />,
-      },
-    ],
+    title: "Dashboard",
+    path: "/dashboard",
+    icon: <MdDashboard />,
   },
   {
-    title: "Analytics",
-    list: [
-      {
-        title: "Projects",
-        path: "/dashboard/projects",
-        icon: <MdWork />,
-      },
-      {
-        title: "Reports",
-        path: "/dashboard/reports",
-        icon: <MdAnalytics />,
-      },
-      {
-        title: "Teams",
-        path: "/dashboard/teams",
-        icon: <MdPeople />,
-      },
-    ],
+    title: "Users",
+    path: "/dashboard/users",
+    icon: <MdSupervisedUserCircle />,
   },
   {
-    title: "User",
-    list: [
-      {
-        title: "Settings",
-        path: "/dashboard/settings",
-        icon: <MdOutlineSettings />,
-      },
-      {
-        title: "Help",
-        path: "/dashboard/help",
-        icon: <MdHelpCenter />,
-      },
-    ],
+    title: "Products",
+    path: "/dashboard/products",
+    icon: <MdShoppingBag />,
+  },
+  {
+    title: "Services",
+    path: "/dashboard/Services",
+    icon: <MdOutlineDesignServices />,
+  },
+  {
+    title: "Projects",
+    path: "/dashboard/projects",
+    icon: <MdWork />,
+  },
+  {
+    title: "Reports",
+    path: "/dashboard/reports",
+    icon: <MdAnalytics />,
+  },
+  {
+    title: "Teams",
+    path: "/dashboard/teams",
+    icon: <MdPeople />,
+  },
+  {
+    title: "Settings",
+    path: "/dashboard/settings",
+    icon: <MdOutlineSettings />,
+  },
+  {
+    title: "Help",
+    path: "/dashboard/help",
+    icon: <MdHelpCenter />,
   },
 ];
 
-const Sidebar = async () => {
- 
+const Sidebar = () => {
   return (
     <div className={styles.container}>
-      
       <Image
-          src="/zikra_logo12.png"
-          alt="Zik Logo"
-          width={200} 
-          height={60} 
-        />
-
-      
+        src="/zikra_logo12.png"
+        alt="Zik Logo"
+        width={200}
+        height={60}
+        className={styles.logo}
+      />
       <ul className={styles.list}>
-        {menuItems.map((cat) => (
-          <li key={cat.title}>
-            <span className={styles.cat}>{cat.title}</span>
-            {cat.list.map((item) => (
-              <MenuLink item={item} key={item.title} />
-            ))}
+        {menuItems.map((item) => (
+          <li key={item.title}>
+            <MenuLink item={item} />
           </li>
         ))}
       </ul>
-     
-        <button className={styles.logout}>
-          <MdLogout />
-          Logout
-        </button>
-        </div>
-      
+     {/* <button className={styles.logout}>
+        <MdLogout />
+        Logout
+      </button>*/}
+    </div>
   );
 };
 

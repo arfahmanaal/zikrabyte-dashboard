@@ -40,7 +40,7 @@
     "src/app/pages/api/submit-data.ts",
     "src/app/lib/mongodb.js",
     "src/app/lib/mongodb.js"
-, "src/app/lib/db.js"  ],
+, "src/app/lib/db.js", "lib/userModel.js"  ],
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node",

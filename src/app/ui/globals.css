@@ -1,8 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
-    --bgSoft:#edf0f5;
+    --bgSoft:#FAFAFA;
     --bg:white;
     --text: black;
-    --textSoft: #b7bac1;
+    --textSoft:#cad3e2;
     --orange:#ff7542;
   }
   

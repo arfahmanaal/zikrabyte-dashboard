@@ -18,13 +18,14 @@ const SignUpPage: React.FC = () => {
         username: "",
         password: "",
     });
-
+    
     const onSignup = async (event: FormEvent) => {
         event.preventDefault();
         try {
           const response =  await Axios.post("/api/users/signup", user);
             router.push("/login");
-        } catch (error:any) {
+        } 
+        catch (error:any) {
             console.error("Error occurred on signup page:", error.message);
         }
     };

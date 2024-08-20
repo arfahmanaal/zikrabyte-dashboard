@@ -1,13 +1,20 @@
-import React from 'react';
-import Image from 'next/image';
-import styles from './service.module.css'
+import * as React from "react";
+import Specialities from "./specialities/Specialities";
+import { Card, CardContent } from "../../../components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import styles from './service.module.css';
 
 interface CardProps {
   title: string;
   description: string;
   img: string;
 }
-
 const cards: CardProps[] = [
   {
     title: 'UI/UX Design',
@@ -56,22 +63,41 @@ const cards: CardProps[] = [
   },
 ];
 
-const ServicesCard: React.FC<CardProps> = ({ title, description, img }) => (
-  <div className={styles.serviceCard}>
-    <Image src={img} alt={title} width={300} height={200} />
-
-    <h3 className={styles.servicetitle}>{title}</h3>
-    <p className={styles.serviceDescription}>{description}</p>
-  </div>
-);
-
-const ServiceCard: React.FC = () => {
+const ServiceCard = () => {
   return (
-    <div className={styles.servicesContainer}>
-      {cards.map((card, index) => (
-        <ServicesCard key={index} {...card} />
-      ))}
-    </div>
+    <div className={styles.serviceContainer}>
+      <Carousel
+        opts={{
+          align: 'start',
+        }}
+        orientation="vertical"
+        className="w-full max-w-md"
+      >
+        <CarouselContent className={`-mt-1 h-[80vh] ${styles.carouselContent}`}>
+          {cards.map((card, index) => (
+            <CarouselItem key={index} className="pt-1 md:basis-1/2">
+              <div className="p-1">
+                <Card className={styles.grayBackground}>
+                  <CardContent className="flex items-center justify-center p-6">
+                    <img src={card.img} alt={card.title} className={styles.serviceImage} />
+                    <div>
+                      <h3 className={styles.serviceTitle}>{card.title}</h3>
+                      <p className={styles.serviceDescription}>{card.description}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+      <div className={styles.specialitiesContainer}>
+        <Specialities />
+      </div>
+      </div>
+    
   );
 };
 

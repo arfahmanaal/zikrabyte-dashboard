@@ -3,7 +3,7 @@ import styles from "./projectList.module.css";
 const Transactions = () => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Latest Projects</h2>
+      <h2 className={styles.title}>LATEST PROJECTS</h2>
       <table className={styles.table}>
         <thead className={styles.thead}>
           <tr>

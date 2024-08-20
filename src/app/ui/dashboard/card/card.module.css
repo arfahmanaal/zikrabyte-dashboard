@@ -8,11 +8,6 @@
   width: 100%;
 }
 
-.container:hover{
-  background-color:var(--orange);
-  color: black;
-}
-
 .texts {
   display: flex;
   flex-direction: column;
@@ -28,11 +23,5 @@
   font-size: 14px;
   font-weight: 300;
 }
-
-.positive {
-  color: lime;
-}
-
-.negative {
-  color: red;
-}
+.aa {
+  background-color: #ff7542; }

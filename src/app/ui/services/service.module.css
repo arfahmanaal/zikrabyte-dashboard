@@ -5,28 +5,14 @@
     justify-content: center;
   }
   
-  .serviceCard {
-    background: linear-gradient(135deg, #ffffff, #f0f0f0); 
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
-    margin: 10px; 
-    animation: gradientAnimation 5s infinite alternate; 
+  .grayBackground {
+    background-color: var(--bgSoft);
   }
-  
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-  
+
   .serviceImage {
     border-radius: 8px;
+    max-width: 50%;
+    height: auto;
   }
   
   .serviceTitle {
@@ -39,4 +25,11 @@
     font-size: 0.9rem;
     color: #555;
   }
+  .serviceContainer {
+    display: flex;
+    gap: 0px;
+  }
   
+  .specialitiesContainer {
+    flex: 1;
+  }

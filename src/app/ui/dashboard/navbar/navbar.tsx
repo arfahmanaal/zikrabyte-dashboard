@@ -2,9 +2,6 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./navbar.module.css";
-import {
-  MdSearch,
-} from "react-icons/md";
 import { FaCircleUser } from "react-icons/fa6";
 import ContactForm from "../contact/ContactForm";
 
@@ -25,7 +22,7 @@ const Navbar = () => {
         </div>
         <div className={styles.icons}>
           
-          <FaCircleUser  size={20} />
+          <FaCircleUser  size={40} />
         </div>
       </div>
     </div>

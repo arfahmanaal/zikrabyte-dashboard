@@ -1,5 +1,7 @@
 import * as React from "react";
 import Specialities from "./specialities/Specialities";
+import Image from 'next/image';
+
 import { Card, CardContent } from "../../../components/ui/card";
 import {
   Carousel,
@@ -79,7 +81,8 @@ const ServiceCard = () => {
               <div className="p-1">
                 <Card className={styles.grayBackground}>
                   <CardContent className="flex items-center justify-center p-6">
-                    <img src={card.img} alt={card.title} className={styles.serviceImage} />
+                  <Image src={card.img} alt={card.title} className={styles.serviceImage} width={400} height={400} />
+
                     <div>
                       <h3 className={styles.serviceTitle}>{card.title}</h3>
                       <p className={styles.serviceDescription}>{card.description}</p>

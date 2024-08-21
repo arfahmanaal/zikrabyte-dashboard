@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+
 import styles from './Tools.module.css';
 
 interface ToolCardProps {
@@ -8,7 +10,7 @@ interface ToolCardProps {
 const ToolCard: React.FC<ToolCardProps> = ({ toolName }) => {
   return (
     <div className={styles.card}>
-      <img src={`/${toolName.replace(/ /g, '').toLowerCase()}.png`} alt={toolName} className={styles.icon} />
+      <Image src={`/${toolName.replace(/ /g, '').toLowerCase()}.png`} alt={toolName} className={styles.icon} width={50} height={50} />
       <p className={styles.toolName}>{toolName}</p>
     </div>
   );

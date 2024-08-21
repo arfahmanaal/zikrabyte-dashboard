@@ -1,0 +1,149 @@
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+.profile {
+  width: 25vh;
+  height: 25vh;
+  border-radius: 50%;
+  margin-bottom: 15px;
+ 
+  border: 3px solid var(--orange); 
+}
+
+.info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.position {
+    font-weight: 500;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+.card1 {
+    width: fit-content;
+    height: fit-content;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; 
+    gap: 15px; 
+    
+  }
+  
+  
+  .socialContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .socialContainer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .containerOne {
+    background-color: #d62976;
+  }
+  
+  .containerTwo {
+    background-color: #0072b1;
+  }
+  
+  .containerThree {
+    background-color: #0072b1;
+  }
+  
+  .containerFour {
+    background-color: #128C7E;
+  }
+  
+  .containerOne:hover {
+    background-color: #b13566;
+  }
+  
+  .containerTwo:hover {
+    background-color: #0099d9;
+  }
+  
+  .containerThree:hover {
+    background-color: #005582;
+  }
+  
+  .containerFour:hover {
+    background-color: #0c6e63;
+  }
+  
+  .socialContainer a:active {
+    transform: scale(0.9);
+  }
+  
+  .socialContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+  }
+  
+  .socialContainer a:hover img {
+    transform: scale(1.1);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

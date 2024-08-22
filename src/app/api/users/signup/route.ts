@@ -11,7 +11,7 @@ export async function POST(request:NextRequest) {
         const {username, email, password} = reqBody;
         const user =  await User.findOne({email});
         if(user){
-            return NextResponse.json({error: "user already exists", status: 400})
+            return NextResponse.json({error: "Internal Server Error"}, {status:500})
         }
         const saltRounds = 10;
         const hashedPassword = await bcrypt.hash(password, saltRounds);
@@ -20,14 +20,7 @@ export async function POST(request:NextRequest) {
             email,
             password: hashedPassword
          });
-         try {
-            const result = await User.create(newUser);
-            
-         } catch (error) {
-            console.log("error while attempting to add user.", error);
-            
-         }
-
+         await User.create(newUser);
         return NextResponse.json({ message: "user created Successfully", status: 201 });
     } 
     catch (error:any) {

@@ -12,7 +12,7 @@ interface User {
 
 const SignUpPage: React.FC = () => {
     const router = useRouter();
-    
+    const [alertDiv, setAlertDiv] = useState("alertHider");
     const [user, setUser] = useState<User>({
         email: "",
         username: "",
@@ -22,26 +22,31 @@ const SignUpPage: React.FC = () => {
     const onSignup = async (event: FormEvent) => {
         event.preventDefault();
         try {
-          const response =  await Axios.post("/api/users/signup", user);
+            const response = await Axios.post("/api/users/signup", user);
             router.push("/login");
+            
         } 
         catch (error:any) {
+            setAlertDiv("failAlertDiv");
             console.error("Error occurred on signup page:", error.message);
         }
     };
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setAlertDiv("alertHider");
         const { name, value } = event.target;
         setUser(prevUser => ({ ...prevUser, [name]: value }));
     };
 
-    return (
-        <div className={style.container}>
+    return (<>
+      <div className={`${style} ${style[alertDiv]}`}>
+    <h5>Please Enter Unique userName and Email</h5>
+    </div> 
+<div className={style.container}>
             <div className={style.wrapper}>
                 <h1 className={style.topText}>Sign Up to Zikrabyte</h1>
                 <form onSubmit={onSignup}>
                     <div className={style.inputSection}>
-                        <input
-                            id="username"
+                        <input id="username"
                             name="username"
                             placeholder="Enter your username"
                             required
@@ -77,8 +82,10 @@ const SignUpPage: React.FC = () => {
                         className={style.submitBtn}
                     />
                 </form>
+                <a href="/login">Already a Member</a>
             </div>
         </div>
+    </>
     );
 }
 

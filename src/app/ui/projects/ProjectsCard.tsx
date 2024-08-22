@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+
 import styles from './ProjectsCard.module.css';
 
 interface ProjectsCardProps {
@@ -9,11 +11,8 @@ const ProjectsCard: React.FC<ProjectsCardProps> = ({ title }) => {
   return (
     <article className={styles.articleWrapper}>
       <div className={`${styles.roundedLg} ${styles.containerProject}`}>
-        <img
-          src="/projects.png"
-          alt="Project Image"
-          className={styles.projectImage}
-        />
+      <Image src="/projects.png" alt="Project Image" width={500} height={300} />
+
       </div>
       <div className={styles.projectInfo}>
         <div className={styles.flexPr}>

@@ -19,7 +19,7 @@ const Page = () => {
     event.preventDefault();
     try {
       const response = await Axios.post("/api/users/login", user);
-      router.push("http://localhost:3000");
+      router.push("/dashboard");
     } catch (error: any) {
       setAlertDiv("failAlertDiv");
       console.log("Login failed", error.message);

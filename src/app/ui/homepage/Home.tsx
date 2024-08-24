@@ -24,26 +24,7 @@ const Home: React.FC = () => {
           We’ll use the same methods that helped you find our site, to bring people to yours.
         </h2>
         
-            <strong className="px-1">
-            <h4 >We are specialized in 
-              <Typical 
-                steps={[
-                  ' Design',
-                  2000,
-                  ' Development',
-                  2000,
-                  ' Content',
-                  2000,
-                  ' Digital Marketing',
-                  2000,
-		            ' SEO',
-                2000,
-                ]}
-                wrapper="span"
-                loop={Infinity}
-              /></h4>
-            </strong>
-
+          
       </div>
       <div className={styles.imageWrapper}>
         <Image 

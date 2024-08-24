@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './Clients.module.css';
 
 const logos = [
@@ -20,7 +21,15 @@ const Clients: React.FC = () => {
       <h2 className={styles.title}>CLIENTS</h2>
       <div className={styles.logos}>
         {logos.map((logo, index) => (
-          <img key={index} src={logo} alt={`Client logo ${index + 1}`} className={styles.logo} />
+          <div key={index} className={styles.logo}>
+            <Image
+              src={logo}
+              alt={`Client logo ${index + 1}`}
+              layout="intrinsic"
+              width={100} 
+              height={100}
+            />
+          </div>
         ))}
       </div>
     </div>

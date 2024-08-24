@@ -8,9 +8,10 @@
     position: relative;
 }
 .inputForm{
-    background-color: white;
-    border: 2px solid;
-    height: 290px;
+    border: 1px solid;
+    background-color: rgb(211 224 231);
+    margin-top: -8px;
+    height: 320px;
     width: 280px;
     border-radius: 2vh;
     display: flex;
@@ -27,25 +28,29 @@
 }
 .inputs{
     padding: 5px;
-    border: 2px solid;
+    border-radius: 5px;
     height: 30px;
-    width: 220px;
+    width: 100%;
     color: black;
+    border:none;
+    background-color: rgb(248, 253, 253);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.9);
+}
+.inputs:focus{
+    outline: none;
 }
 .submitBtn{
-    border: 2px solid;
     height:45px;
-    width: 100px;
-    color: black;
-    background-color:rgb(255, 122, 55);
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color:rgb(34, 50, 77);
     font-weight: 700;
     font-family: sans-serif;
     border-radius: 10px;
 
 }
 .submitBtn:hover{
-    background-color:rgb(255, 92, 33);
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.9);
+    background-color:rgb(19, 33, 59);
 }
 .successAlertDiv{
     display: flex;
@@ -68,9 +73,43 @@
     height: 10vh;
     align-items: center;
     justify-content: center;
-    border: 3px solid rgb(83, 0, 0);
+    border: 2px solid rgb(83, 0, 0);
     background-color: rgb(114, 51, 51);
-    color: black;
+    color: rgb(255, 255, 255);
     position: absolute;
     z-index: 1;
+}
+.inputFieldWrapper{
+    height: 160px;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.inputField{
+    height: 56px;
+    padding: 2px;
+}
+.inputLabel{
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.loginWrapper{
+    background-color: rgb(19, 33, 59);
+    height: 370px;
+    width: 284px;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.bottomDiv{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
 }

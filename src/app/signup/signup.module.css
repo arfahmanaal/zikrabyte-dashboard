@@ -1,5 +1,4 @@
 .container{
-    border: 2px solid;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -20,38 +19,36 @@
     font-size: 30px;
     font-weight: 800;
     font-family: sans-serif;
-    color: rgb(255, 98, 7);
+    color: rgb(19, 33, 59);
 }
 .inputSection{
-    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 90%;
+    width: 100%;
 }
 .inputs{
-    height: 50px;
+    height: 40px;
+    padding: 5px;
     width: 100%;
     color: black;
-    border: 1px solid white;
     background-color: white;
     border-radius: 10px;
-    font-size: 18px;
-    padding: 2vh;
     outline: none;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.9);
 }
 .submitBtn{
-    height: 10vh;
-    width: 20vw;
-    color: black;
+    height: 40px;
+    width: 100%;
+    color: rgb(255, 255, 255);
     font-size: 15px;
     border-radius: 2vh;
     font-weight: 800;
-    background-color: rgb(255, 111, 59);
+    background-color:rgb(34, 50, 77);
 }
 .submitBtn:hover{
-    background-color: rgb(255, 81, 17) ;
+    background-color:rgb(19, 33, 59);
 }
 .alertHider{
     display: none;
@@ -67,4 +64,29 @@
     color: black;
     position: absolute;
     z-index: 1;
+}
+.signForm{
+    border: 1px solid;
+    background-color: rgb(211 224 231);
+    margin-top: -8px;
+    height: 400px;
+    width: 300px;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.inputLabel{
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.inputFieldWrapper{
+    height: 280px;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

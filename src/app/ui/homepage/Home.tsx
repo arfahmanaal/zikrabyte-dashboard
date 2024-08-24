@@ -1,9 +1,16 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './Home.module.css';
+import { useRouter } from "next/navigation";
 
 const Home: React.FC = () => {
+  const [btnText, setBtnText] = useState("Login");
+  const router = useRouter();
+  const handleLogIn = () =>{
+    setBtnText("Processing...")
+    router.push("/signup");
+  }
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
@@ -15,7 +22,7 @@ const Home: React.FC = () => {
           height={60} 
         />
       </div>
-      <button className={styles.loginButton}>Login</button>
+      <button className={styles.loginButton} onClick={handleLogIn}>{btnText}</button>
       <div className={styles.textContainer}>
         <h1 className={styles.heading}>FOR AN INCREDIBLE NEXT GEN SOLUTIONS</h1>
         <h2 className={styles.subHeading}>

@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Home.module.css';
-n
 
 const Home: React.FC = () => {
   return (

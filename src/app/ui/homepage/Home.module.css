@@ -1,0 +1,114 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .textContainer {
+    max-width: 500px;
+    margin-left: 100px;
+    flex: 1;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subHeading {
+    font-size: 1.25rem;
+    color: #666;
+  }
+  
+  .image {
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .loginButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #1a1a2e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .loginButton:hover {
+    background-color: #333;
+  }
+  
+  @media (max-width: 1200px) {
+    .textContainer {
+      margin-left: 50px;
+    }
+  
+    .image {
+      width: 300px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+    }
+  
+    .logo {
+      position: static;
+      margin-bottom: 20px;
+    }
+  
+    .textContainer {
+      margin-left: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .subHeading {
+      font-size: 1rem;
+    }
+  
+    .image {
+      width: 100%;
+      max-width: none;
+    }
+  
+    .loginButton {
+      position: static;
+      margin-top: 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 1.5rem;
+    }
+  
+    .subHeading {
+      font-size: 0.875rem;
+    }
+  }
+  

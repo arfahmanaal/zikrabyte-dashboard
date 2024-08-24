@@ -1,12 +1,8 @@
-import LogSignBtn from "./loginBtn/page";
-
+import Image from "next/image";
+import Home from "./ui/homepage/Home";
 const Homepage = () => {
-  return (<>
-    <div>Homepage</div>
-    <div style={{position:"absolute", zIndex:5, width:"95vw", display:"flex", flexDirection:"row", justifyContent:"flex-end" }}>
-    <LogSignBtn />
-    </div>
-    </>
+  return (
+    <div><Home/></div>
   )
 }
 

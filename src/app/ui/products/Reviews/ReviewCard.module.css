@@ -1,0 +1,57 @@
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  
+  }
+  .card {
+    width: 500px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .body {
+    padding: 20px;
+  }
+  
+  .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .skillName {
+    width: 220px;
+    font-size: 16px;
+  }
+  
+  .skillLevel {
+    width: 160px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+  
+  .skillPercent {
+    background-color: rgb(238, 203, 8);
+    height: 100%;
+  }
+  
+  .skillPercentNumber {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  

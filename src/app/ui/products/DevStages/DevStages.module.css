@@ -1,0 +1,48 @@
+.stagescontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    position:relative;
+    margin-top: 30px;
+  }
+  
+  .stagecard {
+    border: 1px solid #ccc;
+    padding: 40px;
+   
+    border-radius: 5px;
+    width: 300px;
+    
+    position: relative;
+  }
+  
+  .number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--orange);
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .stagescontainer {
+      justify-content: flex-start;
+    }
+  
+    .stagecard {
+      width: 100%;
+    }
+  }
+  

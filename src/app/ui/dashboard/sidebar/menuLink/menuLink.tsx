@@ -1,27 +1,24 @@
-"use client"
+'use client';
 
-import Link from 'next/link'
-import styles from './menuLink.module.css'
-import { usePathname } from 'next/navigation'
+import Link from 'next/link';
+import styles from './menuLink.module.css';
+import { usePathname } from 'next/navigation';
 
 interface MenuItem {
-
-  icon: React.ReactNode; 
+  icon: React.ReactNode;
   title: string;
-  path:string;
-  
+  path: string;
 }
 
-const MenuLink =  ({ item }: { item: MenuItem }) => {
-
-  const pathname = usePathname()
+const MenuLink = ({ item }: { item: MenuItem }) => {
+  const pathname = usePathname();
 
   return (
-    <Link href={item.path} className={`${styles.container} ${pathname === item.path && styles.active}`}>
+    <Link href={item.path} className={`${styles.container} ${pathname === item.path ? styles.active : ''}`}>
       {item.icon}
-      {item.title}
+      <p className={styles.title}>{item.title}</p>
     </Link>
-  )
-}
+  );
+};
 
-export default MenuLink
+export default MenuLink;

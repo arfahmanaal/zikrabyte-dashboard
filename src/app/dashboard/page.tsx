@@ -1,10 +1,10 @@
 import { cards } from "../lib/data";
 import Card from "../ui/dashboard/card/card";
 import Chart from "../ui/dashboard/chart/chart";
-import styles from "../ui/dashboard/dashboard.module.css";
+import styles from "../ui/dashboard.module.css";
 import Transactions from "../ui/dashboard/LatestProjects/ProjectList";
 import WelcomeCard from "../ui/dashboard/WelcomeCard/WelcomeCard";
-import Newsletter from "../ui/dashboard/Newsletter/Newsletter"; // Adjust the import path as needed
+import Newsletter from "../ui/dashboard/Newsletter/Newsletter"; 
 
 const Dashboard = () => {
   return (

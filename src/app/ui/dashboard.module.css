@@ -1,18 +1,21 @@
 .container {
   display: flex;
+ 
 }
 
 .menu {
   flex: 1;
   background-color:black;
   color: white;
-  padding: 20px;
-  min-height: 100vh;
+  padding: 0px;
+  height:auto;
+  width:100px;
 }
 
 .content {
-  flex: 4;
+  flex: 6;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 
@@ -61,4 +64,43 @@
 
 .chart {
   margin-top: 16px;
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    width: 120px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .menu {
+    width: 150px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu {
+    width: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .menu {
+    width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu {
+    width: 60px;
+  }
+}
+
+@media (max-width: 360px) {
+  .menu {
+    width: 50px;
+  }
 }

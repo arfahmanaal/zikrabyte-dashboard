@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
+import ProjectHead from './ProjectHead';
 import styles from './ProjectsCard.module.css';
 
 interface ProjectsCardProps {
@@ -9,7 +9,11 @@ interface ProjectsCardProps {
 
 const ProjectsCard: React.FC<ProjectsCardProps> = ({ title }) => {
   return (
+    <div>
+          
+    
     <article className={styles.articleWrapper}>
+      
       <div className={`${styles.roundedLg} ${styles.containerProject}`}>
       <Image src="/projects.png" alt="Project Image" width={500} height={300} />
 
@@ -47,6 +51,7 @@ const ProjectsCard: React.FC<ProjectsCardProps> = ({ title }) => {
         </div>
       </div>
     </article>
+    </div>
   );
 };
 
@@ -54,11 +59,17 @@ const ProjectsList: React.FC = () => {
   const titles = Array.from({ length: 8 }, (_, index) => `Project${index + 1}`);
 
   return (
-    <div className={styles.gridContainer}>
-      {titles.map((title, index) => (
-        <ProjectsCard key={index} title={title} />
-      ))}
-    </div>
+    <>
+    <div className={styles.container}>
+      <ProjectHead />
+      </div>
+      <div className={styles.gridContainer}>
+        {titles.map((title, index) => (
+          <ProjectsCard key={index} title={title} />
+        ))}
+      </div>
+    
+    </>
   );
 };
 

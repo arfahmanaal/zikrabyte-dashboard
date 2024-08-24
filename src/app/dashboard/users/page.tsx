@@ -1,14 +1,10 @@
-import React from 'react'
-
+import UserDetails from "@/app/ui/users/UserDetails"
 const page = () => {
-  return (<>
+  return (
   <div >
-    <div>
-      you can continue from here...
+   <UserDetails/>
     </div>
-    <table></table>
-    </div>
-  </>
+ 
   )
 }
 

@@ -3,12 +3,57 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 5px 0px;
+  margin: 5px;
   border-radius: 10px;
+  width: 170px;
+  transition: padding 0.3s ease, width 0.3s ease;
 }
 
 .container:hover,
 .active {
-  background-color:#ff7542;
-  color:black;
+  background-color: #ff7542;
+  color: black;
 }
+
+.title {
+  margin-left: 10px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 70px;
+  }
+  
+  .title {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 50px;
+  }
+
+  .title {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: 50px;
+  }
+
+  .title {
+    display: none;
+  }
+}
+
+
+
